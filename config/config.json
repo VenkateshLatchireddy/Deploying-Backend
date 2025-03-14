@@ -1,23 +1,22 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
-    "database": "job_listing",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "test": {
-    "username": "root",
-    "password": "root",
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "production": {
-    "username": "root",
-    "password": "root",
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "password": "YOUR_RAILWAY_PASSWORD",
+    "database": "railway",
+    "host": "centerbeam.proxy.rlwy.net",
+    "port": 41510,
+    "dialect": "mysql",
+    "dialectOptions": {
+      "connectTimeout": 60000,
+      "ssl": {
+        "rejectUnauthorized": true
+      }
+    },
+    "pool": {
+      "max": 10,
+      "min": 0,
+      "acquire": 60000,
+      "idle": 10000
+    }
   }
 }
